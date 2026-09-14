@@ -10,7 +10,8 @@ These may be used as long as the current product page or FAQ still says them. Re
 
 - The FAQ self-description: "queer-owned 90s and Y2K pop culture streetwear brand born in Crown Heights, Brooklyn in 2012."
 - Two store locations at the addresses printed on the site.
-- "Made in New York City" for Choose Your Word caps and beanies, as their product pages and the FAQ state. Custom shirts are not covered: the only origin wording for them is in a meta description written during the September 2026 SEO pass, so that claim is `[CLIENT REVIEW]` (section 3).
+- "Made in New York City" for Choose Your Word caps and beanies, as their product pages and the FAQ state.
+- "Made to order" for Custom Order Cap and Custom Shirt Orders (owner confirmed 2026-09-14). A production location for custom shirts is not approved; "made in NYC" stays limited to the word caps and beanies until the owners confirm otherwise (section 3).
 - Materials and construction stated on the specific product page (for example, 100% cotton caps; 100% acrylic beanies; Comfort Colors 1717 tees at 100% ring-spun US cotton, 6.1 oz; custom shirt 50/25/25 poly, cotton, rayon blend).
 - Sizing as the FAQ lists it.
 - The custom order process, split by product. Custom Order Cap and Custom Shirt Orders: check out, then email the image or phrase. Choose Your Word beanies: choose "Custom word," check out, then email or DM the word. Choose Your Word caps: no custom option exists in the dropdown as of 2026-09-14, so copy must say "email or DM us your word before ordering" and must not tell a buyer to check out first (see `.agents/aliens-of-brooklyn-brand-context.md` section 2).
@@ -34,7 +35,7 @@ Find the page or owner document first, then cite it.
 
 ## 3. Claims requiring owner review before publishing
 
-- Any origin or made-in claim for custom shirts, totes, sweatshirts, or other products whose visible page does not state one.
+- Any production location for custom shirts, totes, sweatshirts, or other products whose visible page does not state one ("made to order" for custom items is approved; "made in NYC" for them is not yet).
 - Founder name, biography, hometown, and the pop-up and store history.
 - Identity descriptors beyond "queer-owned" (for example, descriptors that appear only in press).
 - Store hours, opening dates, and event details.

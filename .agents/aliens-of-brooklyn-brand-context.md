@@ -1,8 +1,8 @@
 # Aliens of Brooklyn: Brand Context for Marketing Agents
 
-**Status:** Draft v1.2, prepared 2026-09-14 for owner review.
+**Status:** Draft v1.3, prepared 2026-09-14 for owner review.
 **Verified against:** https://www.aliensofbrooklyn.com (homepage, FAQ, About Us, Custom Printing page, product pages, policies) on 2026-09-14, plus the owner-provided AOB brand brief.
-**How to read this file:** Every fact carries a source tag. `[SITE]` was read on the live website. `[BRIEF]` comes from the owner-provided brand brief and is not published on the site. `[CLIENT REVIEW]` needs owner confirmation before it appears in public copy. `[ASSUMPTION]` is agent inference and must not be published. The full hierarchy is in `docs/source-of-truth.md`.
+**How to read this file:** Every fact carries a source tag. `[SITE]` was read on the live website. `[BRIEF]` comes from the owner-provided brand brief and is not published on the site. `[APPROVED]` was confirmed by an owner in writing (date noted). `[CLIENT REVIEW]` needs owner confirmation before it appears in public copy. `[ASSUMPTION]` is agent inference and must not be published. The full hierarchy is in `docs/source-of-truth.md`.
 
 ---
 
@@ -31,7 +31,7 @@ Prices are the list prices seen on 2026-09-14. Re-check the live product page be
 | Choose Your Word beanies | Shop WORD BEANIES (`/collections/beanies`) | $25 | Black, grey, hot pink, light pink. 100% acrylic, washable, made in NYC. Custom word turnaround 1 to 2 weeks. `[SITE]` |
 | Celeb Beanies | Shop Celeb Beanies (`/collections/celeb-beanies`) | $25 | FAQ names this as the Kinkysweat collaboration line. `[SITE]` |
 | Pop culture t-shirts | Shop T-shirts (`/collections/shirts`) | $45 | Unisex garment-dyed tees on Comfort Colors 1717 blanks: 100% ring-spun US cotton, 6.1 oz, relaxed fit, pre-shrunk. Sizes S to 3XL. `[SITE]` |
-| Custom Shirt Orders | `/products/custom-shirt-orders` | $45 | White, S to 2XL, "super soft shirt blend (50% polyester/25% cotton/25% rayon)", image area about 11" x 8", ships in about one week. `[SITE]` The phrase "Made to order in NYC" appears only in this page's meta description, which was written during the September 2026 SEO pass, not in the visible product copy. `[CLIENT REVIEW]` before using an origin claim for custom shirts. |
+| Custom Shirt Orders | `/products/custom-shirt-orders` | $45 | White, S to 2XL, "super soft shirt blend (50% polyester/25% cotton/25% rayon)", image area about 11" x 8", ships in about one week. `[SITE]` Made to order and shipped (not a walk-in item): owner confirmed 2026-09-14. `[APPROVED]` Production location: the meta description says "in NYC" but the visible page does not; `[CLIENT REVIEW]` before adding a location to the claim. |
 | Sweatshirts | Shop Sweatshirts (`/collections/sweat-shirts`) | $50 | Unisex, S to 2XL. `[SITE]` |
 | Baby tees and crop tops | collection listed on `/collections` | $42 | Micro rib crop top baby tees, XS to 2XL, cropped and fitted. `[SITE]` |
 | Tote bags | Shop Tote Bags (`/collections/tote-bags`) | $25 | Pop culture prints. `[SITE]` |
@@ -85,7 +85,8 @@ Primary pain points to solve on the site (from the 2026-09-12 audit; the site is
 
 ## 7. Differentiators (what can be said)
 
-- Made in New York City: word hats and beanies are described on their product pages and the FAQ as made in New York City. Apply this only to the products that say so. `[SITE]` Custom shirts: origin appears only in the meta description; `[CLIENT REVIEW]` before use.
+- Made in New York City: word hats and beanies are described on their product pages and the FAQ as made in New York City. Apply this only to the products that say so. `[SITE]`
+- Custom shirts: "made to order" is owner-confirmed 2026-09-14 and may be used. `[APPROVED]` The production location (NYC or elsewhere) is `[CLIENT REVIEW]`; do not write "made in NYC" for custom shirts until confirmed.
 - Customization at two levels: pick a word from the menu, or send any word or image. `[SITE]`
 - Same-visit custom printing at the East Village store. `[SITE]`
 - Two physical stores in two culturally aligned neighborhoods. `[SITE]`
@@ -171,6 +172,7 @@ Outdated internal references to ignore: the brand brief and design brief mention
 
 ## 15. Change log
 
+- v1.3 (2026-09-14): Owner confirmed custom shirts are made to order and shipped; location still open.
 - v1.2 (2026-09-14): Cap and beanie custom-word instructions split; cap path is contact-before-ordering until the dropdown is fixed.
 - v1.1 (2026-09-14): Codex review fixes. Removed an internal analytics conclusion; custom shirt origin claim moved to client review (found only in a meta description); recorded the cap custom-option conflict; narrowed made-in claims to word caps and beanies.
 - v1 (2026-09-14): initial draft from the live site, FAQ, product pages, policies, and the owner brand brief. Prepared for owner review.
