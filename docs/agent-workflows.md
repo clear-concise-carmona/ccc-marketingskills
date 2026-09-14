@@ -110,7 +110,7 @@ Prompt to start: "Rewrite the product page at [URL] using the AOB brand context.
 **Skills:** `analytics`, `attribution`.
 
 1. Accept only aggregated exports or screenshots the owners provide for the task (sessions by source, add-to-cart counts, orders by channel, top products). Refuse customer-level data.
-2. Ask for the human versus bot breakdown. Without it, session counts are inflated and the direction of any conversion-rate distortion is unknown; tag conversion interpretations `[ASSUMPTION]`.
+2. Ask whether the figures were exported with Shopify bot filtering on, and ask for the human versus bot breakdown. If the filtering status is unknown, say that bot sessions may be included and tag any session or conversion interpretation `[ASSUMPTION]`; do not state the size or direction of the distortion without the breakdown.
 3. Answer the question the owners asked, then list the two or three next questions the data cannot answer yet and what setup would answer them.
 4. Output: a short findings memo. Numbers stay in the memo; nothing is written to this repo.
 
