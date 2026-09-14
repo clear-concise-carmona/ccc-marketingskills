@@ -153,15 +153,22 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   TRACKED=$(git ls-files --cached --others --exclude-standard)
 else
   # Outside git: null-delimited paths so spaces in filenames are preserved.
+  # xargs returns 123 for both "no match" and "grep hit a read error", so stderr
+  # is captured separately: any stderr output means the scan was incomplete.
+  errfile=$(mktemp)
   out=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -path "./$SELF" -print0 \
-        | xargs -0 grep -nIoE "$SECRET_PATTERN" 2>&1); rc=$?
-  if [[ $rc -eq 0 ]]; then
+        | xargs -0 grep -nIoE "$SECRET_PATTERN" 2>"$errfile"); rc=$?
+  if [[ -s "$errfile" ]]; then
+    fail "credential scan incomplete (files could not be read):"
+    sed 's/^/      /' "$errfile" | head -5
+  elif [[ $rc -eq 0 ]]; then
     report_hits "working tree" "$out"
-  elif [[ $rc -eq 123 || $rc -eq 1 ]]; then
+  elif [[ $rc -eq 1 || $rc -eq 123 ]]; then
     pass "no credential-looking strings in working tree"
   else
-    fail "credential scan failed: $out"
+    fail "credential scan failed (exit $rc)"
   fi
+  rm -f "$errfile"
   TRACKED=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' | sed 's|^\./||')
 fi
 ENVFILES=$(echo "$TRACKED" | grep -E '(^|/)\.env(\..*)?$' | grep -v '\.env\.example$' || true)

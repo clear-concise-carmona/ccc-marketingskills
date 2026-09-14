@@ -15,7 +15,7 @@ Use the owner's product description formula in this order: hook, benefit, detail
 5. **CTA:** one line. Branded CTAs from the brief are allowed in the body; the button label stays a Shopify decision.
 
 Hard rules:
-- Preserve the custom order instructions on every custom product exactly as the live page states them (check out, then email or DM the word or image). On cap pages the "custom option" the copy mentions does not exist in the dropdown as of 2026-09-14; do not direct cap buyers through it. Flag the conflict and see `aliens-of-brooklyn-brand-context.md` section 2. `[CLIENT REVIEW]`
+- Preserve the custom order instructions per product. Custom Order Cap and Custom Shirt Orders: check out, then email the image or phrase. Beanies: choose "Custom word" in the dropdown, check out, then email or DM the word. Caps: the dropdown has no custom option as of 2026-09-14, so email or DM the word before ordering and wait for the owners to confirm how to buy; never tell a cap buyer to purchase a preset word and request a change afterward. Flag the cap conflict in every deliverable that touches it; see `aliens-of-brooklyn-brand-context.md` section 2. `[CLIENT REVIEW]`
 - State the turnaround the page already states. Do not shorten it.
 - State "final sale" on custom items.
 - Keep the SEO title under 60 characters in the form `Product | Aliens of Brooklyn` and the meta description under 160 characters. This matches the format the owners used in their September 2026 metadata pass. `[BRIEF]`
@@ -74,7 +74,7 @@ Hard rules:
 ## 7. Paid ad copy cautions
 
 - Draft concepts for Meta and TikTok only with owner confirmation that pixels and ad accounts exist. Agents never touch ad accounts.
-- Explicit menu words and celebrity-named products will fail platform review. Build ad concepts around the clean subset of the word menu, the made-in-NYC story, the custom option, and the stores.
+- Explicit menu words and celebrity-named products will fail platform review. Build ad concepts around the clean subset of the word menu, the made-in-NYC story, the custom word offer, and the stores.
 - No claims about delivery speed, discounts, returns, quality guarantees, or "best" anything without a source.
 - No targeting or copy that references sexual orientation, gender identity, race, religion, disability, or age as a targeting criterion, and nothing that body-shames or excludes. Inclusive brand tone is fine; protected-class targeting is not.
 - No before-and-after framing, no medical or wellness implications from apparel.
@@ -94,7 +94,7 @@ Hard rules:
 - Work only from aggregated metrics or sanitized exports the owners hand over for a specific task. Never request a full customer export, order export, or email list.
 - Nothing with names, emails, phone numbers, addresses, order IDs, payment details, or IP addresses enters this repo, a prompt log, or a deliverable.
 - If a file with customer data is shared by mistake, stop, say so, and do not summarize its contents beyond counts.
-- Before interpreting session or conversion figures, ask the owners whether bot and datacenter traffic has been filtered. Unfiltered Shopify session data understates real conversion; say so in any analysis that uses it.
+- Before interpreting session or conversion figures, ask the owners for the human versus bot breakdown (Shopify's bot filtering provides it). Bots inflate session counts, but their effect on conversion rate can go either way: they can convert at a lower or a higher rate than humans. Do not state the direction of the distortion until the breakdown is in hand; if it is not, tag any conversion interpretation `[ASSUMPTION]`.
 - Analytics setup recommendations (GA4, Search Console, pixels) are instructions for the owners to apply. Agents never hold or store credentials, property IDs, or tokens; use `{{GA4_MEASUREMENT_ID}}` style placeholders in any code sample.
 - Reports go in the deliverable, not in the repo. This repo holds rules and context, not results.
 

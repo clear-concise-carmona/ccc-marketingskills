@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1.1
+**Document version:** v1.2
 **Last updated:** 2026-09-14
 **Client:** Aliens of Brooklyn (AOB), https://www.aliensofbrooklyn.com
 **Read next:** `.agents/aliens-of-brooklyn-brand-context.md` (full product facts and voice), `.agents/ecommerce-marketing-context.md` (channel rules), `docs/claims-and-disclaimers.md` (what can be claimed). This file is the short version that every skill reads first.
@@ -64,7 +64,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 | Will it fit? | FAQ sizing: tees S to 3XL relaxed unisex; baby tees XS to 2XL; sweatshirts S to 2XL; hats and beanies one size, hats adjustable, ages 6 and up. DM before ordering if unsure. `[SITE]` |
 | How long will it take? | Ships within 1 week; custom caps 5 to 7 days; custom beanies 1 to 2 weeks; custom shirts about a week. `[SITE]` |
 | Can I return it? | Returns only for items damaged on arrival; custom items are final sale. `[SITE]` Do not soften this. |
-| How do I send my word? | Check out, then email or DM the word or image. `[SITE]` The "custom option" exists on beanie dropdowns but not on cap dropdowns as of 2026-09-14. `[CLIENT REVIEW]` |
+| How do I send my word? | Beanies: choose "Custom word" in the dropdown, check out, then email or DM the word. Caps: the dropdown has no custom option as of 2026-09-14, so email or DM the word before ordering and wait for the owners to confirm how to buy; never tell a cap buyer to purchase a preset word and request a change afterward. Custom Order Cap and Custom Shirt Orders: check out, then email the image or phrase. `[SITE]` `[CLIENT REVIEW]` on the cap path |
 | Do you ship internationally? | Yes, at extra cost, weighed at checkout. `[SITE]` |
 
 **Anti-persona:** Shoppers who want free returns, next-day shipping, or corporate-safe slogans. `[ASSUMPTION]`
@@ -113,5 +113,6 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v1.2 (2026-09-14): Split cap and beanie custom-word instructions so caps are never routed through a checkout-first step; bot traffic direction left open until the human/bot split is known.
 - v1.1 (2026-09-14): Codex review fixes. Custom shirt origin moved to client review (only in meta description); cap custom-option conflict recorded; made-in claims narrowed to word caps and beanies.
 - v1 (2026-09-14): Initial context drafted from the live site, FAQ, product pages, policies, and the owner brand brief; every line tagged by source for owner review.

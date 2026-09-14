@@ -1,6 +1,6 @@
 # Aliens of Brooklyn: Brand Context for Marketing Agents
 
-**Status:** Draft v1.1, prepared 2026-09-14 for owner review.
+**Status:** Draft v1.2, prepared 2026-09-14 for owner review.
 **Verified against:** https://www.aliensofbrooklyn.com (homepage, FAQ, About Us, Custom Printing page, product pages, policies) on 2026-09-14, plus the owner-provided AOB brand brief.
 **How to read this file:** Every fact carries a source tag. `[SITE]` was read on the live website. `[BRIEF]` comes from the owner-provided brand brief and is not published on the site. `[CLIENT REVIEW]` needs owner confirmation before it appears in public copy. `[ASSUMPTION]` is agent inference and must not be published. The full hierarchy is in `docs/source-of-truth.md`.
 
@@ -47,7 +47,8 @@ Custom word availability, verified 2026-09-14: the beanie dropdowns include a "C
 
 ## 3. Custom order instructions (preserve these exactly)
 
-- Choose Your Word items: pick a word from the dropdown. For a word not on the list, the site says to select the custom option, complete checkout, then email aliensofbrooklyn@gmail.com or DM @aliensofbrooklyn with the word. `[SITE]` The custom option exists on beanies but not on caps as of 2026-09-14 (see section 2). `[CLIENT REVIEW]`
+- Choose Your Word beanies: pick a word from the dropdown, or choose "Custom word," complete checkout, then email aliensofbrooklyn@gmail.com or DM @aliensofbrooklyn with the word. `[SITE]`
+- Choose Your Word caps: pick a word from the dropdown. For any other word, the cap copy says to use a custom option that the dropdown does not have (section 2). Until the owners fix this, copy must tell cap buyers to email or DM the word before ordering, and must not tell them to check out first. `[CLIENT REVIEW]`
 - Custom Order Cap and Custom Shirt Orders: complete the purchase, then email the exact image or phrase to aliensofbrooklyn@gmail.com. `[SITE]`
 - Turnaround stated on the site: custom caps "about 5 to 7 days"; custom beanies "1 to 2 weeks"; custom shirts "one week to be shipped out." `[SITE]`
 - "Custom word and custom image items are made for you and are final sale." `[SITE]`
@@ -170,5 +171,6 @@ Outdated internal references to ignore: the brand brief and design brief mention
 
 ## 15. Change log
 
+- v1.2 (2026-09-14): Cap and beanie custom-word instructions split; cap path is contact-before-ordering until the dropdown is fixed.
 - v1.1 (2026-09-14): Codex review fixes. Removed an internal analytics conclusion; custom shirt origin claim moved to client review (found only in a meta description); recorded the cap custom-option conflict; narrowed made-in claims to word caps and beanies.
 - v1 (2026-09-14): initial draft from the live site, FAQ, product pages, policies, and the owner brand brief. Prepared for owner review.

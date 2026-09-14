@@ -58,7 +58,7 @@ Prompt to start: "Rewrite the product page at [URL] using the AOB brand context.
 
 **Skills:** `cro`, `copywriting`, `emails`.
 
-1. Walk the flow on the live site: product page, variant dropdown, custom option, cart, checkout, and the post-purchase email step described on the page.
+1. Walk the flow on the live site for one beanie and one cap: product page, variant dropdown (beanies have a "Custom word" option; caps do not as of 2026-09-14), cart, checkout, and the post-purchase email step described on the page.
 2. List each point where the buyer has to leave the site or guess (what to email, how many characters, when they will hear back).
 3. Draft: product-page microcopy for the custom option, a cart note, a post-purchase email for custom orders ("send us your word," turnaround, final sale), and an FAQ entry.
 4. Recommend the structural fix (a line item property text field for the word) with an implementation note for the owners, and keep the current email flow documented as the truth until it ships.
@@ -110,7 +110,7 @@ Prompt to start: "Rewrite the product page at [URL] using the AOB brand context.
 **Skills:** `analytics`, `attribution`.
 
 1. Accept only aggregated exports or screenshots the owners provide for the task (sessions by source, add-to-cart counts, orders by channel, top products). Refuse customer-level data.
-2. Ask whether bot and datacenter traffic has been filtered; if not, treat session counts as inflated and say so.
+2. Ask for the human versus bot breakdown. Without it, session counts are inflated and the direction of any conversion-rate distortion is unknown; tag conversion interpretations `[ASSUMPTION]`.
 3. Answer the question the owners asked, then list the two or three next questions the data cannot answer yet and what setup would answer them.
 4. Output: a short findings memo. Numbers stay in the memo; nothing is written to this repo.
 

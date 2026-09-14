@@ -13,7 +13,7 @@ These may be used as long as the current product page or FAQ still says them. Re
 - "Made in New York City" for Choose Your Word caps and beanies, as their product pages and the FAQ state. Custom shirts are not covered: the only origin wording for them is in a meta description written during the September 2026 SEO pass, so that claim is `[CLIENT REVIEW]` (section 3).
 - Materials and construction stated on the specific product page (for example, 100% cotton caps; 100% acrylic beanies; Comfort Colors 1717 tees at 100% ring-spun US cotton, 6.1 oz; custom shirt 50/25/25 poly, cotton, rayon blend).
 - Sizing as the FAQ lists it.
-- The custom order process as the live page states it (check out, then email or DM the word or image). Do not reference a "custom option" on cap pages until the owners add it to the dropdown (see `.agents/aliens-of-brooklyn-brand-context.md` section 2).
+- The custom order process, split by product. Custom Order Cap and Custom Shirt Orders: check out, then email the image or phrase. Choose Your Word beanies: choose "Custom word," check out, then email or DM the word. Choose Your Word caps: no custom option exists in the dropdown as of 2026-09-14, so copy must say "email or DM us your word before ordering" and must not tell a buyer to check out first (see `.agents/aliens-of-brooklyn-brand-context.md` section 2).
 - Turnaround exactly as stated: custom caps about 5 to 7 days, custom beanies 1 to 2 weeks, custom shirts about one week to ship.
 - Shipping policy text and the returns policy text, quoted or paraphrased without softening.
 - In-store custom printing at the East Village location in under 30 minutes for walk-ins.
