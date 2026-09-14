@@ -10,6 +10,68 @@ New to the terminal and coding agents? Check out the companion guide [Coding for
 
 Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help.
 
+## This fork: Aliens of Brooklyn
+
+This copy of Marketing Skills is set up to support [Aliens of Brooklyn](https://www.aliensofbrooklyn.com), a queer-owned 90s and Y2K pop culture streetwear brand with a Shopify store, custom word hats and beanies made in NYC, and stores in the East Village and East Austin. The skills are unchanged; the client context, governance, and validation live in `.agents/`, `docs/`, and `scripts/`. Everything below this section is the upstream README and still applies.
+
+### What it supports
+
+Product page rewrites, collection page SEO, homepage audits, custom order flow clarity, email and SMS flows, Instagram and TikTok captions, ad concepts, conversion audits, merchandising recommendations, launch and seasonal campaign planning, gift guides, FAQ and policy copy cleanup, and store or pop-up promotion. Each has a workflow in [docs/agent-workflows.md](docs/agent-workflows.md).
+
+### Who reads what
+
+| Reader | Start here |
+|--------|------------|
+| A person (owner, collaborator) | This section, then [.agents/aliens-of-brooklyn-brand-context.md](.agents/aliens-of-brooklyn-brand-context.md) |
+| Claude Code (implementation) | [CLAUDE.md](CLAUDE.md), then [AGENTS.md](AGENTS.md) |
+| OpenAI Codex and other agents (review) | [AGENTS.md](AGENTS.md) |
+| Any agent writing customer-facing copy | [docs/claims-and-disclaimers.md](docs/claims-and-disclaimers.md) |
+
+### Install and use
+
+The skills are already in `skills/`, so an agent opened in this repo can read them directly. To install them into another project, use any method in the [Installation](#installation) section below (for Claude Code, `npx skills add coreyhaines31/marketingskills -a claude-code`). Every skill reads `.agents/product-marketing.md` first; it is populated for this client.
+
+**Claude Code workflow:** open the repo, run `scripts/validate-agent-docs.sh`, read the three `.agents/` files, pick the workflow in `docs/agent-workflows.md`, work in a `docs/`, `content/`, or `seo/` branch, verify facts on the live site, produce a before/after deliverable with `[CLIENT REVIEW]` and `[ASSUMPTION]` tags, run validation again, and write a handoff summary.
+
+**Codex workflow:** open the branch, read `AGENTS.md`, check the deliverable against the live pages and `docs/claims-and-disclaimers.md`, report findings in the priority order listed under "Codex review guidelines" in `AGENTS.md`, and confirm `scripts/validate-agent-docs.sh` passes.
+
+### Directory structure (client additions)
+
+```
+.agents/
+  README.md                            what lives here and how to install skills
+  product-marketing.md                 short context every skill reads first
+  aliens-of-brooklyn-brand-context.md  durable brand and product facts, tagged by source
+  ecommerce-marketing-context.md       product page, collection, SEO, email, social, ads, CRO, privacy rules
+docs/
+  source-of-truth.md                   source hierarchy, conflict handling, privacy boundaries
+  claims-and-disclaimers.md            what may be claimed; publish checklist
+  agent-workflows.md                   step-by-step workflows per task
+scripts/
+  validate-agent-docs.sh               checks required files, links, tags, secrets, em-dashes
+CLAUDE.md                              Claude Code specifics (a real file in this fork)
+AGENTS.md                              cross-agent rules; client section first, upstream guidelines after
+```
+
+### Source of truth
+
+Owner-approved brand materials, then the official website, then official social channels (only when provided or verified), then this repo's docs, then the Claude and OpenAI cookbook conventions, then third-party press as supporting context, then agent inference marked `[ASSUMPTION]`. Owner materials set positioning and voice but cannot override a price, policy, address, or product spec printed on the live site. Details in [docs/source-of-truth.md](docs/source-of-truth.md). Prices, policies, and addresses are verified on the live site on the date of use; the context files record what was true on their verification date.
+
+### Safety notes
+
+- Customer data (names, emails, phones, addresses, orders, payments, analytics exports) never enters this repo or an agent prompt. Aggregates supplied for one task stay in that task's deliverable.
+- Credentials (Shopify, ad platforms, email tools, analytics) are never written anywhere. Samples use `{{PLACEHOLDER}}`.
+- Ad accounts are never accessed by agents; agents draft concepts only.
+- Store writes through any connector happen only with per-item owner approval.
+- Everything an agent produces is a draft until the owners approve it.
+
+### Maintenance
+
+- When a product fact, price, policy, or address changes, update `.agents/aliens-of-brooklyn-brand-context.md` and, if positioning changed, `.agents/product-marketing.md`. Bump the version and add a change log line.
+- Run `scripts/validate-agent-docs.sh` before every pull request touching `.agents/`, `docs/`, `AGENTS.md`, `CLAUDE.md`, or this section.
+- To pull upstream skill updates: `git fetch upstream && git merge upstream/main`. Keep `CLAUDE.md` as a real file and keep the client section of `AGENTS.md` and this README on merge. Client docs do not bump `VERSIONS.md` or the plugin version.
+- Review the context files at least quarterly and after any store change (new collection handles, new policies, new locations).
+
 ## Partners
 
 The library is free and MIT-licensed. [Verified Partners](tools/REGISTRY.md#verified-partners) fund the work — vetted, disclosed tool integrations, listed alongside the neutral options and never influencing what the core skills recommend. The full rules and boundaries are in [tools/PARTNERS.md](tools/PARTNERS.md). [Become a partner →](https://marketing-skills.com/sponsorship)
