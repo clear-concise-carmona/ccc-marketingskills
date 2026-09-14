@@ -1,10 +1,20 @@
 # Dependencies
 node_modules/
 
-# Skill install artifacts (npx skills add)
-.agents/
+# Skill install artifacts (npx skills add, git submodule)
+# Only installed skills are ignored. The tracked brand and ecommerce context
+# files in .agents/*.md are part of this repo (see .agents/README.md).
+.agents/skills/
+.agents/marketingskills/
 .claude/
 skills-lock.json
+
+# Client data must never be committed (exports, analytics, customer lists)
+*.csv
+!skills/**/*.csv
+!tools/**/*.csv
+data/
+exports/
 
 # Environment variables / secrets
 .env

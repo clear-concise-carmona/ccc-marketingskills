@@ -2,6 +2,145 @@
 
 Guidelines for AI agents working in this repository.
 
+This fork is configured for one client: **Aliens of Brooklyn**. The first section is the client working agreement and applies to Codex, Claude Code, Cursor, and any other agent. The sections after it are the upstream Marketing Skills library guidelines and still apply when editing skills or tools. Claude Code also reads `CLAUDE.md`.
+
+## Aliens of Brooklyn: Client Working Agreement (read first)
+
+### What this repo is for
+
+Marketing Skills gives coding agents 50 marketing skills (`skills/*/SKILL.md`). This fork points them at Aliens of Brooklyn's ecommerce growth: product and collection pages, SEO, conversion, email and SMS, social, ads, merchandising, launches, and campaign planning. Claude Code implements; OpenAI Codex reviews.
+
+### Client context in one paragraph
+
+Aliens of Brooklyn (https://www.aliensofbrooklyn.com) is, in its own words on its FAQ, a "queer-owned 90s and Y2K pop culture streetwear brand born in Crown Heights, Brooklyn in 2012." It sells pop culture tees, sweatshirts, baby tees, totes, magnets, and mugs, plus Choose Your Word dad hats ($35) and beanies ($25) made in New York City, and fully custom caps and shirts ($45) where the buyer emails or DMs the word or image after purchase. Custom items are final sale. Two stores: 304 E 5th St, New York, NY 10003 (East Village) and 1630 E 6th St #104, Austin, TX 78702 (East Austin). Walk-in custom printing at the NYC store. Full facts with source tags: `.agents/aliens-of-brooklyn-brand-context.md`. Prices and policies change; verify on the live page before quoting.
+
+### Source of truth hierarchy
+
+1. Owner-approved brand materials shared by the owners.
+2. The official website.
+3. Official Instagram and other official channels, only when provided or clearly verified.
+4. This repo's existing documentation.
+5. Claude and OpenAI cookbook conventions.
+6. Third-party press and interviews, labeled as supporting context.
+7. Agent inference, labeled `[ASSUMPTION]` and never published.
+
+One carve-out: owner materials set positioning, voice, and history, but they cannot override a price, policy, address, or product spec printed on the live site. When the two disagree on those, the site wins and the owner document is treated as outdated. Rules for conflicts, tags, and requests for missing information: `docs/source-of-truth.md`.
+
+### Client files in this repo
+
+```
+.agents/
+├── README.md                              # How to use this directory
+├── product-marketing.md                   # Short context every skill reads first
+├── aliens-of-brooklyn-brand-context.md    # Durable brand and product facts, tagged by source
+└── ecommerce-marketing-context.md         # Channel-by-channel operating rules
+docs/
+├── source-of-truth.md                     # Source hierarchy, conflicts, privacy boundaries
+├── claims-and-disclaimers.md              # What may be claimed; review checklist
+└── agent-workflows.md                     # Step-by-step task workflows
+scripts/
+└── validate-agent-docs.sh                 # Doc validation (links, tags, secrets, em-dashes)
+CLAUDE.md                                  # Claude Code specifics
+```
+
+### Agent operating rules
+
+- Read `.agents/product-marketing.md` before any marketing task. Read `.agents/aliens-of-brooklyn-brand-context.md` and `docs/claims-and-disclaimers.md` before writing customer-facing copy.
+- Verify every product fact on the live page the day you use it. Record the URL and date.
+- Drafts only. Nothing is published, sent, or applied to the store without owner approval per item. If a connector is available, writes require an explicit instruction naming the item.
+- Mark what you cannot verify: `[CLIENT REVIEW]` for facts needing owner sign-off, `[ASSUMPTION]` for inference. Never remove a tag to make a draft look done.
+- Batch open questions at the end of the task. Do not fill gaps with plausible answers.
+- Prefer small, reviewable changes. One product, one collection, one flow per branch when practical.
+- Do not copy competitor wording. Study patterns only.
+
+### Build, test, and validation commands
+
+```bash
+scripts/validate-agent-docs.sh        # Client docs: required files, relative links, tags, secrets, em-dashes
+./validate-skills.sh                  # Skill frontmatter and structure (only when a SKILL.md changes)
+node --check tools/clis/<name>.js     # CLI syntax (only when a tool changes)
+```
+
+There is no build step. Skills and docs are markdown.
+
+### Documentation rules
+
+- Client docs use plain markdown, H2 and H3 headings, short paragraphs, tables for facts.
+- No em-dashes anywhere in client docs or copy (owner writing rule). Use periods, commas, or colons.
+- Every fact that can change (price, policy, address, menu word) carries a source tag and, where useful, a verification date.
+- Context files carry a version and change log; bump on any substantive change.
+- Keep `.agents/product-marketing.md` short. Detail goes in the brand context file.
+- Do not edit upstream skill files to add client specifics. Client context stays in `.agents/` and `docs/`.
+
+### Marketing skill usage rules
+
+- Use the skill that matches the task (table in `CLAUDE.md`; workflows in `docs/agent-workflows.md`).
+- Skills that touch data (`analytics`, `attribution`) run on aggregated or sanitized inputs only.
+- Skills that produce ads (`ads`, `ad-creative`) draft concepts; agents never access ad accounts.
+- Skills that produce outreach (`public-relations`, `influencer-marketing`, `cold-email`) produce drafts with every name and claim tagged for review.
+- `product-marketing` updates go to `.agents/product-marketing.md` with a version bump.
+
+### Ecommerce copy rules
+
+- Product description order: hook, benefit, details, vibe, CTA.
+- Preserve materials, sizes, care, turnaround, custom order steps, made-in claims, and "final sale" on custom items. Remove supplier boilerplate.
+- SEO title `Product | Aliens of Brooklyn` under 60 characters; meta description under 160; alt text under 125.
+- No discount, code, threshold, delivery date, carrier, exchange, or free-return language unless the owners confirm it.
+- No store hours. No "grand opening." Soft opening language only.
+- Full rules: `.agents/ecommerce-marketing-context.md`.
+
+### Brand consistency rules
+
+- Voice: fun, cheeky, playful, inclusive; bold and nostalgic; short sentences; 90s and Y2K references; space and alien metaphors in moderation; one or two emoji at most and none in policy text.
+- Inclusive by default. Never exclude, mock, or single out anyone.
+- Provocative or explicit slogans: only those already on the site or approved in writing.
+- Celebrity, character, and franchise references: only existing product titles; never imply endorsement or partnership.
+- Visual system is in transition; confirm with the owners before design work. No hex codes in customer copy.
+
+### File editing rules
+
+- Branch names: `docs/<topic>`, `content/<topic>`, `seo/<topic>`, or the upstream patterns for skill work.
+- Conventional Commits (`docs:`, `feat:`, `fix:`).
+- Do not overwrite or restructure upstream files (`README.md` sections below the client section, `skills/`, `tools/`, `VERSIONS.md`, `.claude-plugin/`) without stating what exists and why the change is needed.
+- Do not bump the repo release version or `VERSIONS.md` for client-doc changes; those track skill changes only.
+- Deliverables (rewritten copy, audits, campaign drafts) are returned to the owners, not committed here, unless they document how to do the work.
+
+### Security and privacy rules
+
+- Never commit or write credentials: Shopify tokens, API keys, ad platform tokens, email platform keys, analytics IDs, `.env` files. Use `{{PLACEHOLDER}}`.
+- Never store, summarize, or restate customer data: names, emails, phones, addresses, orders, payments, analytics exports. Aggregates for a specific task stay in that task's deliverable.
+- Fabricated examples only: "Alex Example," "alex@example.com," "order #1001."
+- If real data or a credential appears by mistake, stop, say so, and do not process it.
+- `.gitignore` excludes `.env*`, loose CSVs, `data/`, and `exports/`. Do not work around it.
+
+### Client review checklist
+
+Before handing off, paste the checklist in `docs/claims-and-disclaimers.md` section 12 and check every line. Short form:
+
+- [ ] Facts verified on the live page today; prices re-checked.
+- [ ] Custom steps, turnaround, and final sale intact.
+- [ ] No new third-party names, endorsements, discounts, hours, guarantees, or superlatives.
+- [ ] No customer data, credentials, or internal metrics.
+- [ ] Every `[CLIENT REVIEW]` and `[ASSUMPTION]` listed in the handoff.
+- [ ] `scripts/validate-agent-docs.sh` passes.
+
+### Definition of done
+
+A task is done when the deliverable is drafted in the brand voice with every fact sourced, the open questions are batched, the checklist is complete, validation passes, a second agent (Codex) has reviewed it against this file and the claims file, and the handoff summary is written. Publishing is the owners' step, not the agent's.
+
+### Codex review guidelines (priority order)
+
+1. Any customer data, credential, or internal metric in a file or diff. Blocker.
+2. Any claim in `docs/claims-and-disclaimers.md` section 4 (endorsement, guarantee, invented material, fake social proof). Blocker.
+3. Product facts that do not match the live page or the brand context file.
+4. Missing or removed `[CLIENT REVIEW]` and `[ASSUMPTION]` tags.
+5. Voice violations: em-dashes, corporate language, more than two emoji, exclusionary copy.
+6. Broken relative links, wrong skill names, missing handoff summary.
+
+---
+
+## Marketing Skills Library Guidelines (upstream)
+
 ## Repository Overview
 
 This repository contains **Agent Skills** for AI agents following the [Agent Skills specification](https://agentskills.io/specification.md). Skills install to `.agents/skills/` (the cross-agent standard). This repo also serves as a **Claude Code plugin marketplace** via `.claude-plugin/marketplace.json`.
@@ -15,8 +154,11 @@ This repository contains **Agent Skills** for AI agents following the [Agent Ski
 
 ```
 marketingskills/
+├── .agents/               # Client context files (tracked) and installed skills (ignored)
 ├── .claude-plugin/
 │   └── marketplace.json   # Claude Code plugin marketplace manifest
+├── docs/                  # Client governance: source of truth, claims, workflows
+├── scripts/               # sync-partners.mjs (upstream), validate-agent-docs.sh (client docs)
 ├── skills/                # Agent Skills
 │   └── skill-name/
 │       └── SKILL.md       # Required skill file
@@ -25,6 +167,8 @@ marketingskills/
 │   ├── composio/          # Composio integration layer (quick start + toolkit mapping)
 │   ├── integrations/      # API integration guides per tool
 │   └── REGISTRY.md        # Tool index with capabilities
+├── AGENTS.md              # This file
+├── CLAUDE.md              # Claude Code specifics (real file in this fork, symlink upstream)
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
