@@ -1,11 +1,11 @@
 # Product Marketing Context
 
-**Document version:** v1.2
+**Document version:** v1.3
 **Last updated:** 2026-09-14
 **Client:** Aliens of Brooklyn (AOB), https://www.aliensofbrooklyn.com
 **Read next:** `.agents/aliens-of-brooklyn-brand-context.md` (full product facts and voice), `.agents/ecommerce-marketing-context.md` (channel rules), `docs/claims-and-disclaimers.md` (what can be claimed). This file is the short version that every skill reads first.
 
-Tags: `[SITE]` verified on the live site 2026-09-14. `[BRIEF]` owner-provided brand brief, not on the site. `[CLIENT REVIEW]` needs owner sign-off before publishing. `[ASSUMPTION]` do not publish.
+Tags: `[SITE]` verified on the live site 2026-09-14. `[BRIEF]` owner-provided brand brief, not on the site. `[APPROVED]` confirmed by an owner in writing. `[CLIENT REVIEW]` needs owner sign-off before publishing. `[ASSUMPTION]` do not publish.
 
 ## Product Overview
 **One-liner:** Queer-owned 90s and Y2K pop culture streetwear, born in Crown Heights, Brooklyn in 2012, with custom word hats and beanies made in New York City. `[SITE]`
@@ -54,7 +54,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 - Two stores in the East Village and East Austin, with walk-in custom printing in NYC "in under 30 minutes." `[SITE]`
 - Queer-owned, Brooklyn-born in 2012. `[SITE]`
 - Collaboration line with Kinkysweat (Celeb Beanies). `[SITE]`
-**How we do it differently:** Word caps and beanies embroidered in New York City. `[SITE]` (applies only to the products whose pages say so; custom shirt origin is `[CLIENT REVIEW]`)
+**How we do it differently:** Word caps and beanies embroidered in New York City `[SITE]`; custom caps and shirts made to order in NYC (owner confirmed 2026-09-14) `[APPROVED]`.
 **Why that's better:** The piece is yours, the joke is yours, and the brand is a real place you can walk into. `[ASSUMPTION]`
 **Why customers choose us:** Owner input needed. No published reviews or testimonials exist. `[CLIENT REVIEW]`
 
@@ -78,7 +78,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 ## Customer Language
 **How they describe the problem:** Owner input needed. No customer research on file in this repo. `[CLIENT REVIEW]`
 **How they describe us:** Owner input needed. `[CLIENT REVIEW]`
-**Words to use:** custom word hat, word beanie, made in NYC (word caps and beanies only), East Village, East Austin, 90s, Y2K, pop culture, queer-owned, keep it weird. `[SITE]` `[BRIEF]`
+**Words to use:** custom word hat, word beanie, made to order in NYC (custom items), made in NYC (word caps, beanies, custom items), East Village, East Austin, 90s, Y2K, pop culture, queer-owned, keep it weird. `[SITE]` `[BRIEF]`
 **Words to avoid:** grand opening (use "soft opening" until the owners say otherwise), free returns, fast shipping, guaranteed delivery, official, licensed, endorsed, celebrity names not already in a product title, any hex code or design jargon in customer copy.
 **Glossary:**
 | Term | Meaning |
@@ -101,7 +101,8 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 **Value themes:**
 | Theme | Proof |
 |-------|-------|
-| Made in NYC | Product pages for word caps and beanies `[SITE]`; custom shirts `[CLIENT REVIEW]` |
+| Made in NYC | Product pages for word caps and beanies `[SITE]`; custom caps and shirts, owner confirmed 2026-09-14 `[APPROVED]` |
+| Made to order | Custom caps and shirts, owner confirmed 2026-09-14 `[APPROVED]` |
 | Real stores | Two addresses on the site `[SITE]` |
 | Customization | Word menu on every word product; custom word option on beanies `[SITE]`; caps `[CLIENT REVIEW]` |
 | Longevity | "born in Crown Heights, Brooklyn in 2012" on the FAQ `[SITE]` |
@@ -113,6 +114,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v1.3 (2026-09-14): "Made to order in NYC" approved for custom caps and shirts (owner confirmation).
 - v1.2 (2026-09-14): Split cap and beanie custom-word instructions so caps are never routed through a checkout-first step; bot traffic direction left open until the human/bot split is known.
 - v1.1 (2026-09-14): Codex review fixes. Custom shirt origin moved to client review (only in meta description); cap custom-option conflict recorded; made-in claims narrowed to word caps and beanies.
 - v1 (2026-09-14): Initial context drafted from the live site, FAQ, product pages, policies, and the owner brand brief; every line tagged by source for owner review.
