@@ -110,7 +110,7 @@ Prompt to start: "Rewrite the product page at [URL] using the AOB brand context.
 **Skills:** `analytics`, `attribution`.
 
 1. Accept only aggregated exports or screenshots the owners provide for the task (sessions by source, add-to-cart counts, orders by channel, top products). Refuse customer-level data.
-2. Note known data quality issues (datacenter traffic inflating sessions) and adjust interpretation.
+2. Ask whether bot and datacenter traffic has been filtered; if not, treat session counts as inflated and say so.
 3. Answer the question the owners asked, then list the two or three next questions the data cannot answer yet and what setup would answer them.
 4. Output: a short findings memo. Numbers stay in the memo; nothing is written to this repo.
 

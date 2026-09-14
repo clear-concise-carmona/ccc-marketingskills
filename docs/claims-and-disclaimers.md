@@ -10,10 +10,10 @@ These may be used as long as the current product page or FAQ still says them. Re
 
 - The FAQ self-description: "queer-owned 90s and Y2K pop culture streetwear brand born in Crown Heights, Brooklyn in 2012."
 - Two store locations at the addresses printed on the site.
-- "Made in New York City" for Choose Your Word caps and beanies, and "made to order in NYC" for custom shirts, as each product page states.
+- "Made in New York City" for Choose Your Word caps and beanies, as their product pages and the FAQ state. Custom shirts are not covered: the only origin wording for them is in a meta description written during the September 2026 SEO pass, so that claim is `[CLIENT REVIEW]` (section 3).
 - Materials and construction stated on the specific product page (for example, 100% cotton caps; 100% acrylic beanies; Comfort Colors 1717 tees at 100% ring-spun US cotton, 6.1 oz; custom shirt 50/25/25 poly, cotton, rayon blend).
 - Sizing as the FAQ lists it.
-- The custom order process (select custom option, check out, email or DM the word or image).
+- The custom order process as the live page states it (check out, then email or DM the word or image). Do not reference a "custom option" on cap pages until the owners add it to the dropdown (see `.agents/aliens-of-brooklyn-brand-context.md` section 2).
 - Turnaround exactly as stated: custom caps about 5 to 7 days, custom beanies 1 to 2 weeks, custom shirts about one week to ship.
 - Shipping policy text and the returns policy text, quoted or paraphrased without softening.
 - In-store custom printing at the East Village location in under 30 minutes for walk-ins.
@@ -34,6 +34,7 @@ Find the page or owner document first, then cite it.
 
 ## 3. Claims requiring owner review before publishing
 
+- Any origin or made-in claim for custom shirts, totes, sweatshirts, or other products whose visible page does not state one.
 - Founder name, biography, hometown, and the pop-up and store history.
 - Identity descriptors beyond "queer-owned" (for example, descriptors that appear only in press).
 - Store hours, opening dates, and event details.

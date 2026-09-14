@@ -74,8 +74,9 @@ for f in "${CLIENT_DOCS[@]}" "README.md"; do
     esac
     path="${target%%#*}"
     [[ -z "$path" ]] && continue
-    if [[ ! -e "$dir/$path" && ! -e "$path" ]]; then
-      fail "$f links to missing path: $target"
+    # Resolve relative to the containing document only; no repo-root fallback.
+    if [[ ! -e "$dir/$path" ]]; then
+      fail "$f links to missing path: $target (resolved from $dir/)"
       LINK_ERRORS=$((LINK_ERRORS + 1))
     fi
   done < <(grep -o '\]([^)]*)' "$f" | sed 's/^](//; s/)$//' | sort -u)
@@ -120,18 +121,48 @@ check_section_emdash "README.md" "## This fork: Aliens of Brooklyn" "## Partners
 echo
 echo "5. Credentials and secrets"
 SECRET_PATTERN='shpat_[A-Za-z0-9]{8,}|shpca_[A-Za-z0-9]{8,}|shpss_[A-Za-z0-9]{8,}|sk_live_[A-Za-z0-9]{8,}|sk_test_[A-Za-z0-9]{8,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|ghp_[A-Za-z0-9]{20,}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
+SELF='scripts/validate-agent-docs.sh'
+
+# Report file:line only. The matched value is never printed, so a real credential
+# does not get copied into logs or agent transcripts.
+report_hits() {
+  local label="$1" hits="$2"
+  fail "credential-looking strings in $label (values redacted):"
+  printf '%s\n' "$hits" | awk -F: '{print "      " $1 ":" $2 ": [REDACTED]"}' | head -10
+}
+
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  # Tracked plus untracked-but-not-ignored, so a new file is checked before it is staged.
+  # git grep handles any filename (spaces included) and reports errors distinctly:
+  # exit 0 = matches, 1 = clean, 2+ = scan error. Two passes: working tree
+  # (tracked plus untracked, ignoring gitignored files) and the staged index,
+  # so a token that is staged but removed from the working copy is still caught.
+  scan_git() {
+    local label="$1"; shift
+    local out rc
+    out=$(git grep -nIoE "$@" -e "$SECRET_PATTERN" -- . ":!$SELF" 2>&1); rc=$?
+    if [[ $rc -ge 2 ]]; then
+      fail "credential scan failed for $label: $out"
+    elif [[ $rc -eq 0 ]]; then
+      report_hits "$label" "$out"
+    else
+      pass "no credential-looking strings in $label"
+    fi
+  }
+  scan_git "working tree (tracked and untracked files)" --untracked
+  scan_git "staged index" --cached
   TRACKED=$(git ls-files --cached --others --exclude-standard)
 else
-  TRACKED=$(find . -type f -not -path './.git/*' -not -path './node_modules/*')
-fi
-HITS=$(echo "$TRACKED" | xargs grep -nEI "$SECRET_PATTERN" 2>/dev/null | grep -v 'scripts/validate-agent-docs.sh' || true)
-if [[ -n "$HITS" ]]; then
-  fail "credential-looking strings found:"
-  echo "$HITS" | head -10 | sed 's/^/      /'
-else
-  pass "no credential-looking strings in tracked files"
+  # Outside git: null-delimited paths so spaces in filenames are preserved.
+  out=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -path "./$SELF" -print0 \
+        | xargs -0 grep -nIoE "$SECRET_PATTERN" 2>&1); rc=$?
+  if [[ $rc -eq 0 ]]; then
+    report_hits "working tree" "$out"
+  elif [[ $rc -eq 123 || $rc -eq 1 ]]; then
+    pass "no credential-looking strings in working tree"
+  else
+    fail "credential scan failed: $out"
+  fi
+  TRACKED=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' | sed 's|^\./||')
 fi
 ENVFILES=$(echo "$TRACKED" | grep -E '(^|/)\.env(\..*)?$' | grep -v '\.env\.example$' || true)
 if [[ -n "$ENVFILES" ]]; then

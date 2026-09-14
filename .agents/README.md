@@ -24,6 +24,7 @@ npx skills add coreyhaines31/marketingskills -a claude-code
 npx skills add coreyhaines31/marketingskills
 
 # Or, from this fork, copy the skills folder
+mkdir -p .agents/skills
 cp -r skills/* .agents/skills/
 ```
 

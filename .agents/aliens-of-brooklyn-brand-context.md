@@ -1,6 +1,6 @@
 # Aliens of Brooklyn: Brand Context for Marketing Agents
 
-**Status:** Draft v1, prepared 2026-09-14 for owner review.
+**Status:** Draft v1.1, prepared 2026-09-14 for owner review.
 **Verified against:** https://www.aliensofbrooklyn.com (homepage, FAQ, About Us, Custom Printing page, product pages, policies) on 2026-09-14, plus the owner-provided AOB brand brief.
 **How to read this file:** Every fact carries a source tag. `[SITE]` was read on the live website. `[BRIEF]` comes from the owner-provided brand brief and is not published on the site. `[CLIENT REVIEW]` needs owner confirmation before it appears in public copy. `[ASSUMPTION]` is agent inference and must not be published. The full hierarchy is in `docs/source-of-truth.md`.
 
@@ -31,7 +31,7 @@ Prices are the list prices seen on 2026-09-14. Re-check the live product page be
 | Choose Your Word beanies | Shop WORD BEANIES (`/collections/beanies`) | $25 | Black, grey, hot pink, light pink. 100% acrylic, washable, made in NYC. Custom word turnaround 1 to 2 weeks. `[SITE]` |
 | Celeb Beanies | Shop Celeb Beanies (`/collections/celeb-beanies`) | $25 | FAQ names this as the Kinkysweat collaboration line. `[SITE]` |
 | Pop culture t-shirts | Shop T-shirts (`/collections/shirts`) | $45 | Unisex garment-dyed tees on Comfort Colors 1717 blanks: 100% ring-spun US cotton, 6.1 oz, relaxed fit, pre-shrunk. Sizes S to 3XL. `[SITE]` |
-| Custom Shirt Orders | `/products/custom-shirt-orders` | $45 | White, S to 2XL, "super soft shirt blend (50% polyester/25% cotton/25% rayon)", image area about 11" x 8", ships in about one week, "made to order in NYC." `[SITE]` |
+| Custom Shirt Orders | `/products/custom-shirt-orders` | $45 | White, S to 2XL, "super soft shirt blend (50% polyester/25% cotton/25% rayon)", image area about 11" x 8", ships in about one week. `[SITE]` The phrase "Made to order in NYC" appears only in this page's meta description, which was written during the September 2026 SEO pass, not in the visible product copy. `[CLIENT REVIEW]` before using an origin claim for custom shirts. |
 | Sweatshirts | Shop Sweatshirts (`/collections/sweat-shirts`) | $50 | Unisex, S to 2XL. `[SITE]` |
 | Baby tees and crop tops | collection listed on `/collections` | $42 | Micro rib crop top baby tees, XS to 2XL, cropped and fitted. `[SITE]` |
 | Tote bags | Shop Tote Bags (`/collections/tote-bags`) | $25 | Pop culture prints. `[SITE]` |
@@ -41,11 +41,13 @@ Prices are the list prices seen on 2026-09-14. Re-check the live product page be
 
 Product naming style: short, meme-literate, pop-culture titles (for example "Am I the Drama," "Golden Gurlz," "Britney 2007," "Heated Hockey"). Several menu words on the caps and beanies are explicit. `[SITE]` See `docs/claims-and-disclaimers.md` for how to handle celebrity references and explicit language.
 
-Choose Your Word menu (cap, as listed on the site): Am I the drama?, Anxiety, Brooklyn, Cat dad, Cat mom, Chicken nugget, Daddy, Dead inside, Dog mom, Dog dad, Don't be a dick, Gluten free, New york, Nope, Papi, Puta, Spicy nugget, and a few explicit options. Custom word available on every item. `[SITE]` Do not invent new menu words in copy; only the owners add words.
+Choose Your Word menu (cap, as listed on the site): Am I the drama?, Anxiety, Brooklyn, Cat dad, Cat mom, Chicken nugget, Daddy, Dead inside, Dog mom, Dog dad, Don't be a dick, Gluten free, New york, Nope, Papi, Puta, Spicy nugget, and a few explicit options. `[SITE]` Do not invent new menu words in copy; only the owners add words.
+
+Custom word availability, verified 2026-09-14: the beanie dropdowns include a "Custom word" option. The cap dropdowns (black and faded grey) list preset words only, yet the cap description says "For Custom words use custom option and email or DM us." `[CLIENT REVIEW]` This is a live conflict: the step the copy describes does not exist on the cap pages. Until the owners add the option or change the copy, drafts must not direct cap buyers through a custom-option step; direct them to email or DM before ordering instead.
 
 ## 3. Custom order instructions (preserve these exactly)
 
-- Choose Your Word items: pick a word from the dropdown. For a word not on the list, select the custom option, complete checkout, then email aliensofbrooklyn@gmail.com or DM @aliensofbrooklyn with the word. `[SITE]`
+- Choose Your Word items: pick a word from the dropdown. For a word not on the list, the site says to select the custom option, complete checkout, then email aliensofbrooklyn@gmail.com or DM @aliensofbrooklyn with the word. `[SITE]` The custom option exists on beanies but not on caps as of 2026-09-14 (see section 2). `[CLIENT REVIEW]`
 - Custom Order Cap and Custom Shirt Orders: complete the purchase, then email the exact image or phrase to aliensofbrooklyn@gmail.com. `[SITE]`
 - Turnaround stated on the site: custom caps "about 5 to 7 days"; custom beanies "1 to 2 weeks"; custom shirts "one week to be shipped out." `[SITE]`
 - "Custom word and custom image items are made for you and are final sale." `[SITE]`
@@ -82,7 +84,7 @@ Primary pain points to solve on the site (from the 2026-09-12 audit; the site is
 
 ## 7. Differentiators (what can be said)
 
-- Made in New York City: word hats, beanies, and custom shirts are described on the site as made in NYC or made to order in NYC. Apply this only to the products that say so. `[SITE]`
+- Made in New York City: word hats and beanies are described on their product pages and the FAQ as made in New York City. Apply this only to the products that say so. `[SITE]` Custom shirts: origin appears only in the meta description; `[CLIENT REVIEW]` before use.
 - Customization at two levels: pick a word from the menu, or send any word or image. `[SITE]`
 - Same-visit custom printing at the East Village store. `[SITE]`
 - Two physical stores in two culturally aligned neighborhoods. `[SITE]`
@@ -127,7 +129,6 @@ Instagram CTA patterns already in use by the brand: the store address for store 
 - Email: a footer newsletter form ("Sign Up") with no incentive shown. Shopify Email is the sending tool as of the audit. Do not assume Klaviyo or any other platform without confirming. `[BRIEF]`
 - No discount code should be referenced in copy unless the owners confirm it exists and is active.
 - Sales channels installed per the owners: Online Store, Google and YouTube, Facebook and Instagram, TikTok, Shop, Point of Sale. Channel approval status is unknown to agents. `[BRIEF]`
-- Best-converting traffic source per the owners' audit: Google search, then Instagram. `[BRIEF]` Keep exact figures out of this repo.
 - Reviews: none displayed on the site. Do not fabricate testimonials or star ratings.
 
 ## 12. Marketing skill usage notes for this brand
@@ -169,4 +170,5 @@ Outdated internal references to ignore: the brand brief and design brief mention
 
 ## 15. Change log
 
+- v1.1 (2026-09-14): Codex review fixes. Removed an internal analytics conclusion; custom shirt origin claim moved to client review (found only in a meta description); recorded the cap custom-option conflict; narrowed made-in claims to word caps and beanies.
 - v1 (2026-09-14): initial draft from the live site, FAQ, product pages, policies, and the owner brand brief. Prepared for owner review.

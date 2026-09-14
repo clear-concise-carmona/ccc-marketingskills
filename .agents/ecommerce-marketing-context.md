@@ -15,7 +15,7 @@ Use the owner's product description formula in this order: hook, benefit, detail
 5. **CTA:** one line. Branded CTAs from the brief are allowed in the body; the button label stays a Shopify decision.
 
 Hard rules:
-- Preserve the custom order instructions word for word on every custom product (select the custom option, check out, then email or DM the word or image).
+- Preserve the custom order instructions on every custom product exactly as the live page states them (check out, then email or DM the word or image). On cap pages the "custom option" the copy mentions does not exist in the dropdown as of 2026-09-14; do not direct cap buyers through it. Flag the conflict and see `aliens-of-brooklyn-brand-context.md` section 2. `[CLIENT REVIEW]`
 - State the turnaround the page already states. Do not shorten it.
 - State "final sale" on custom items.
 - Keep the SEO title under 60 characters in the form `Product | Aliens of Brooklyn` and the meta description under 160 characters. This matches the format the owners used in their September 2026 metadata pass. `[BRIEF]`
@@ -94,7 +94,7 @@ Hard rules:
 - Work only from aggregated metrics or sanitized exports the owners hand over for a specific task. Never request a full customer export, order export, or email list.
 - Nothing with names, emails, phone numbers, addresses, order IDs, payment details, or IP addresses enters this repo, a prompt log, or a deliverable.
 - If a file with customer data is shared by mistake, stop, say so, and do not summarize its contents beyond counts.
-- Known data quality issue from the owners' audit: a large share of Shopify sessions were datacenter traffic in 2026. Treat raw conversion rates as understated and say so in any analysis.
+- Before interpreting session or conversion figures, ask the owners whether bot and datacenter traffic has been filtered. Unfiltered Shopify session data understates real conversion; say so in any analysis that uses it.
 - Analytics setup recommendations (GA4, Search Console, pixels) are instructions for the owners to apply. Agents never hold or store credentials, property IDs, or tokens; use `{{GA4_MEASUREMENT_ID}}` style placeholders in any code sample.
 - Reports go in the deliverable, not in the repo. This repo holds rules and context, not results.
 

@@ -74,7 +74,7 @@ Full workflows with steps and output formats: `docs/agent-workflows.md`.
 
 - **Customer data:** never request, open, summarize, or store customer lists, order exports, email lists, or anything with names, emails, phones, addresses, or payment details. Aggregates supplied for a task stay in that task's deliverable.
 - **Shopify and ecommerce data:** read-only unless the owners approve a specific write. No theme edits on the live theme without an explicit per-file instruction.
-- **Analytics data:** aggregated only; note the datacenter-traffic caveat in any interpretation.
+- **Analytics data:** aggregated only; ask whether bot traffic has been filtered before interpreting session or conversion figures.
 - **Ad accounts:** never connect to, read, or modify. Draft concepts only.
 - **Credentials:** never write tokens, keys, property IDs, or `.env` contents anywhere. Use `{{PLACEHOLDER}}` in samples. If a credential appears in a message or file, say so and do not repeat it.
 - **Claims:** follow `docs/claims-and-disclaimers.md`. No celebrity endorsement, no invented materials, no shipping or returns promises, no store hours, no "grand opening."

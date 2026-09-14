@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1
+**Document version:** v1.1
 **Last updated:** 2026-09-14
 **Client:** Aliens of Brooklyn (AOB), https://www.aliensofbrooklyn.com
 **Read next:** `.agents/aliens-of-brooklyn-brand-context.md` (full product facts and voice), `.agents/ecommerce-marketing-context.md` (channel rules), `docs/claims-and-disclaimers.md` (what can be claimed). This file is the short version that every skill reads first.
@@ -54,7 +54,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 - Two stores in the East Village and East Austin, with walk-in custom printing in NYC "in under 30 minutes." `[SITE]`
 - Queer-owned, Brooklyn-born in 2012. `[SITE]`
 - Collaboration line with Kinkysweat (Celeb Beanies). `[SITE]`
-**How we do it differently:** Embroidered and printed to order in NYC instead of dropshipped. `[SITE]` (applies to the products whose pages say so)
+**How we do it differently:** Word caps and beanies embroidered in New York City. `[SITE]` (applies only to the products whose pages say so; custom shirt origin is `[CLIENT REVIEW]`)
 **Why that's better:** The piece is yours, the joke is yours, and the brand is a real place you can walk into. `[ASSUMPTION]`
 **Why customers choose us:** Owner input needed. No published reviews or testimonials exist. `[CLIENT REVIEW]`
 
@@ -64,7 +64,7 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 | Will it fit? | FAQ sizing: tees S to 3XL relaxed unisex; baby tees XS to 2XL; sweatshirts S to 2XL; hats and beanies one size, hats adjustable, ages 6 and up. DM before ordering if unsure. `[SITE]` |
 | How long will it take? | Ships within 1 week; custom caps 5 to 7 days; custom beanies 1 to 2 weeks; custom shirts about a week. `[SITE]` |
 | Can I return it? | Returns only for items damaged on arrival; custom items are final sale. `[SITE]` Do not soften this. |
-| How do I send my word? | Select the custom option, check out, then email or DM the word or image. `[SITE]` |
+| How do I send my word? | Check out, then email or DM the word or image. `[SITE]` The "custom option" exists on beanie dropdowns but not on cap dropdowns as of 2026-09-14. `[CLIENT REVIEW]` |
 | Do you ship internationally? | Yes, at extra cost, weighed at checkout. `[SITE]` |
 
 **Anti-persona:** Shoppers who want free returns, next-day shipping, or corporate-safe slogans. `[ASSUMPTION]`
@@ -78,12 +78,12 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 ## Customer Language
 **How they describe the problem:** Owner input needed. No customer research on file in this repo. `[CLIENT REVIEW]`
 **How they describe us:** Owner input needed. `[CLIENT REVIEW]`
-**Words to use:** custom word hat, word beanie, made in NYC, made to order, East Village, East Austin, 90s, Y2K, pop culture, queer-owned, keep it weird. `[SITE]` `[BRIEF]`
+**Words to use:** custom word hat, word beanie, made in NYC (word caps and beanies only), East Village, East Austin, 90s, Y2K, pop culture, queer-owned, keep it weird. `[SITE]` `[BRIEF]`
 **Words to avoid:** grand opening (use "soft opening" until the owners say otherwise), free returns, fast shipping, guaranteed delivery, official, licensed, endorsed, celebrity names not already in a product title, any hex code or design jargon in customer copy.
 **Glossary:**
 | Term | Meaning |
 |------|---------|
-| Choose Your Word | The cap and beanie line with a dropdown word menu plus a custom option |
+| Choose Your Word | The cap and beanie line with a dropdown word menu; beanies also offer a custom word option, caps do not as of 2026-09-14 `[CLIENT REVIEW]` |
 | Custom Order Cap / Custom Shirt Orders | Fully custom products; buyer emails the image or phrase after purchase |
 | Celeb Beanies | The Kinkysweat x Aliens of Brooklyn collaboration line |
 | Custom Printing | Walk-in printing at 304 E 5th St, NYC |
@@ -101,9 +101,9 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 **Value themes:**
 | Theme | Proof |
 |-------|-------|
-| Made in NYC | Product pages for word caps, beanies, and custom shirts `[SITE]` |
+| Made in NYC | Product pages for word caps and beanies `[SITE]`; custom shirts `[CLIENT REVIEW]` |
 | Real stores | Two addresses on the site `[SITE]` |
-| Customization | Word menu plus custom option on every word product `[SITE]` |
+| Customization | Word menu on every word product; custom word option on beanies `[SITE]`; caps `[CLIENT REVIEW]` |
 | Longevity | "born in Crown Heights, Brooklyn in 2012" on the FAQ `[SITE]` |
 
 ## Goals
@@ -113,4 +113,5 @@ Do not name competitors in public copy. For research only: Brooklyn and Austin Y
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v1.1 (2026-09-14): Codex review fixes. Custom shirt origin moved to client review (only in meta description); cap custom-option conflict recorded; made-in claims narrowed to word caps and beanies.
 - v1 (2026-09-14): Initial context drafted from the live site, FAQ, product pages, policies, and the owner brand brief; every line tagged by source for owner review.
